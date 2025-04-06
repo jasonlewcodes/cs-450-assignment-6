@@ -156,7 +156,7 @@ class App extends Component {
       .tickFormat((d) =>
         d.toLocaleString("default", { month: "long" }).substring(0, 3)
       );
-    const barYAxisGenerator = d3.axisLeft(barYScale);
+    const barYAxisGenerator = d3.axisLeft(barYScale).ticks(5);
 
     d3.select(".bar-chart-x-axis")
       .attr("transform", `translate(0, ${barChartHeight})`)
